@@ -4,7 +4,6 @@ server {
   include /etc/nginx/includes/server_params.conf;
   include /etc/nginx/includes/proxy_params.conf;
   client_max_body_size 0;
-  proxy_set_header Origin "";
 
   location / {
     proxy_pass {{ .protocol }}://backend/;
